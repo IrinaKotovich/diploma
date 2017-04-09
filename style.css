@@ -7,6 +7,8 @@ input, textarea{background:none; border:none; display:block; margin-bottom:8px;o
 	.form input, .form textarea, .form select{display: block;margin: 0 6px;padding: 4px;width: 250px;border: 3px solid #AEFF7B;border-radius: 6px;color: #6C6C6C;transition: all 0.4s ease-out;}
 	.form input:focus, .form textarea:focus { outline: none;border-color: #7AE239;}
 	.form textarea{width: 600px}
+	.form input.error{border-color:red}
+	.form input#scope_form{text-transform:uppercase}
 
 	.form .div_name{float:left;}
 	.form .for_name{  display: table;}
@@ -16,8 +18,10 @@ input, textarea{background:none; border:none; display:block; margin-bottom:8px;o
 	.form table{border: 3px solid #AEFF7B;margin: 20px 6px ;border-radius: 6px;width:700px;color: #6C6C6C;}
 		.form table th{border-bottom: 3px solid #AEFF7B}
 		.form table th,td{padding: 10px 5px; text-align: center}
-.print {display:none}
+		
+.print {//display:none}
 .print span, .span{ display:block; margin-bottom:11px;font: 13.3333px Arial;}
+.print span.number span{display:inline; margin-right:5px}
 .diploma{background-image:url(background.png); background-size: 100%;width:1077px;height:756px;//padding-top:70px;//margin-left:5px}
 	.diploma .left, .diploma .right{width:45%; height:100%; float:left;margin-top:70px;height:686px;}
 	.diploma .right{padding-left: 70px;}

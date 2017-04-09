@@ -39,15 +39,19 @@ $.print = function(x){
 		str=$(this).attr('id');		
 		id=str.substr(0, $(this).attr('id').length - 5);
 		if (!$(this).val() && id!='subjects'){
-			
+			$(this).addClass('error');	
 			error=1;
 		}
 		else{
-			
-			
+						
 			//для дисциплин
 			if(id=='subjects'){
+				$('.attachment2 #subjects_form').remove();
 				$(this).clone().appendTo('.'+x+' .'+id);
+				$('.attachment2 #subjects_form select option').each(function() {					
+					if($(this).val()!=$("form #subjects_form select").val()) $(this).remove();
+				})
+			
 			}
 			else{	
 				
@@ -63,7 +67,24 @@ $.print = function(x){
 		}
 	});
 	
-	// если все поля заполнены
+	if(error==1) alert('Не все поля заполнены');
+	
+	if (x=='diploma'){
+		var surname=$('#surname_form').val().substr(0,3);
+		var name=$('#name_form').val().substr(0,3);
+		var middlename=$('#middlename_form').val().substr(0,3);
+		if ($('#surname_dat_form').val().substr(0,3)!=surname) {error=2; $('#surname_dat_form').addClass('error')}
+		if ($('#surname_rod_form').val().substr(0,3)!=surname) {error=2; $('#surname_rod_form').addClass('error')}
+		
+		if ($('#name_dat_form').val().substr(0,3)!=name) {error=2; $('#name_dat_form').addClass('error')}
+		if ($('#name_rod_form').val().substr(0,3)!=name) {error=2; $('#name_rod_form').addClass('error')}
+		
+		if ($('#middlename_dat_form').val().substr(0,3)!=middlename) {error=2; $('#middlename_dat_form').addClass('error')}
+		if ($('#middlename_rod_form').val().substr(0,3)!=middlename) {error=2; $('#middlename_rod_form').addClass('error')}
+	}
+	if(error==2)  alert('Проверьте правильность написание полей с именем');
+	
+	// если все поля заполнены и имена совпадают
 	if(!error){
 		if(x=='diploma'){
 			var printing_css='<style>\ span, .span{ display:block; margin-bottom:11px;font: 13.3333px Arial;}'
@@ -87,7 +108,7 @@ $.print = function(x){
 
 			+'.diploma .surname_rod{margin-left: 140px; }'
 			+'.diploma .name_rod{margin-left: 50px;display:inline  }'
-			+'.diploma .scope{margin-left: 40px;margin-top:37px}'
+			+'.diploma .scope{margin-left: 40px;margin-top:37px;text-transform:uppercase}'
 			+'.diploma .s_y {margin-top:222px;margin-left: 70px;}'
 			+'.diploma .sity{display:inline;padding-left:10px}'
 			+'.diploma .year{display:inline;padding-left:95px}'
@@ -96,7 +117,8 @@ $.print = function(x){
 			+'@page {size: landscape; margin:0;padding:0}}</style>';
 		}
 		else if(x=='attachment'){
-			var printing_css='<style>\ span, .span{ display:block; margin-bottom:11px;font: 13.3333px Arial;}'
+			var printing_css='<style> span, .span{ display:block; margin-bottom:11px;font: 13.3333px Arial;}'
+			+'span.number span{display:inline; margin-right:5px}'
 			
 			+'.attachment{background-image:url(background1.jpg); background-size: 100%;width:538.5px;height:756px;padding-top: 46px;}'
 			+'.attachment .number{margin-left:420px}'
@@ -148,7 +170,6 @@ $.print = function(x){
 		win.print();
 		$('iframe').remove();
 	}
-	else alert('Не все поля заполнены');
 }
 
 
@@ -186,33 +207,11 @@ $(document).ready(function() {
 	};
 	$.datepicker.setDefaults($.datepicker.regional['ru']);
 	
-	
-	
-	// $('.name_cours').val($('.for_name_cours option').html());
-	// if($('.for_name_cours').val()==1) $('.sector').val('информационной безопасности');
-	
-	// $( '.for_name_cours' ).click(function() {
-		// $( ".for_name_cours  option:selected" ).each(function() {
-			// $('.name_cours').val($(this ).html());
-		// });
-		
-		// $('.for_name_cours').css('display', 'none');
-		
-		// if($('.for_name_cours').val()==1) $('.sector').val('информационной безопасности');
-		// if($('.for_name_cours').val()==2) $('.sector').val('');
-	// });
-	
-	// $( '.name_cours' ).click(function() {
-		// $('.for_name_cours').css('display', 'block');
-	// });
-	// $( '.name_cours' ).focusout(function() {		
-		//if(!$('.for_name_cours').is(":focus")){
-		//	$('.for_name_cours').css('display', 'none');
-		//}
-	// });
+ 	$('input').click(function(){
+		$(this).removeClass('error');
+	});
 	
 	$('.button').button();
-	//$('#for_name_cours').menu();
 	
 	
 })

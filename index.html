@@ -20,19 +20,19 @@
 	</div >
 	<div class="for_name for">
 		<div class="div_name">
-			Фамилия <input id="surname_form" class="for_attachment"></input>
-			Имя <input id="name_form" class="for_attachment"></input>
-			Отчество <input id="middlename_form" class="for_attachment"></input>
+			Фамилия <input id="surname_form" class="for_attachment" placeholder="Иванов"></input>
+			Имя <input id="name_form" class="for_attachment" placeholder="Иван"></input>
+			Отчество <input id="middlename_form" class="for_attachment" placeholder="Иванович"></input>
 		</div>
 		<div class="div_name">
-			Фамилия в дательном падеже<input id="surname_dat_form" class="for_diploma"></input>
-			Имя в дательном падеже <input id="name_dat_form" class="for_diploma"></input>
-			Отчество в дательном падеже <input id="middlename_dat_form" class="for_diploma"></input>
+			Фамилия в дательном падеже<input id="surname_dat_form" class="for_diploma" placeholder="Иванову"></></input>
+			Имя в дательном падеже <input id="name_dat_form" class="for_diploma" placeholder="Ивану"></input>
+			Отчество в дательном падеже <input id="middlename_dat_form" class="for_diploma" placeholder="Ивановичу"></input>
 		</div>
 		<div class="div_name">
-			Фамилия в родительном падеже <input id="surname_rod_form" class="for_diploma"></input>
-			Имя в родительном падеже <input id="name_rod_form" class="for_diploma"></input>
-			Отчество в родительном падеже <input id="middlename_rod_form" class="for_diploma"></input>
+			Фамилия в родительном падеже <input id="surname_rod_form" class="for_diploma" placeholder="Иванова"></input>
+			Имя в родительном падеже <input id="name_rod_form" class="for_diploma" placeholder="Ивана"></input>
+			Отчество в родительном падеже <input id="middlename_rod_form" class="for_diploma" placeholder="Ивановича"></input>
 		</div>
 	</div>
 	<div class="for">
@@ -40,6 +40,7 @@
 		<select  id="educ_form" class="for_attachment select">
 					<option selected="selected" value='1'>высшем</option>
 					<option value='2'>среднем</option>
+					<option value='3'>среднем специальном</option>
 		</select>
 	</div >
 	<div class="for">
@@ -82,8 +83,12 @@
 	</div >
 	
 	<div class="for">
-		Номер приложения
-		<input  id="number_form" class="for_attachment" ></input>
+		Номер бланка диплома:<br>Цифры
+		<input  id="number1_form" class="for_attachment" ></input>
+		Буквы
+		<input  id="number2_form" class="for_attachment" ></input>
+		Номер
+		<input  id="number3_form" class="for_attachment" ></input>
 	</div >
 	
 	</form>
@@ -137,7 +142,7 @@
 		
 		<div id="attachment">
 			<div class="attachment">
-				<span  class="number">ddd</span>
+				<span  class="number"><span  class="number1">ddd</span><span  class="number2">ddd</span><span  class="number3">ddd</span></span>
 			
 				<span class="surname">Иванов</span>
 				<span class="name">Иван</span>
