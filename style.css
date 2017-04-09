@@ -1,0 +1,77 @@
+
+#print_frame{width:1077px;height:756px;}
+input, textarea{background:none; border:none; display:block; margin-bottom:8px;overflow:hidden;resize: none;font: 13.3333px Arial;}
+
+
+.form{display: block}
+	.form input, .form textarea, .form select{display: block;margin: 0 6px;padding: 4px;width: 250px;border: 3px solid #AEFF7B;border-radius: 6px;color: #6C6C6C;transition: all 0.4s ease-out;}
+	.form input:focus, .form textarea:focus { outline: none;border-color: #7AE239;}
+	.form textarea{width: 600px}
+
+	.form .div_name{float:left;}
+	.form .for_name{  display: table;}
+	.form .for{ margin-bottom:50px;}
+	.form #for_name_cours{width:500px}
+
+	.form table{border: 3px solid #AEFF7B;margin: 20px 6px ;border-radius: 6px;width:700px;color: #6C6C6C;}
+		.form table th{border-bottom: 3px solid #AEFF7B}
+		.form table th,td{padding: 10px 5px; text-align: center}
+.print {display:none}
+.print span, .span{ display:block; margin-bottom:11px;font: 13.3333px Arial;}
+.diploma{background-image:url(background.png); background-size: 100%;width:1077px;height:756px;//padding-top:70px;//margin-left:5px}
+	.diploma .left, .diploma .right{width:45%; height:100%; float:left;margin-top:70px;height:686px;}
+	.diploma .right{padding-left: 70px;}
+
+	.diploma .reg_number{margin-left: 280px;margin-top: 585px; }
+
+	.diploma .surname_dat{margin-left: 200px;}
+	.diploma .name_dat{margin-left: 70px;display:inline }
+	.diploma .middlename_dat,.diploma .middlename_rod{margin-left: 10px; display:inline }
+
+		.diploma .date1{margin-left: 150px; display:inline;white-space: pre;}
+		.diploma .date2{display:inline;white-space: pre;margin-left: 64px;}
+		.diploma .date3{margin-left: 172px;white-space: pre;}
+	.diploma .name_inst{margin-left: 30px;line-height: 2;text-indent: 320px; padding: 0px;margin-top: -4px;    margin-bottom: 3px;}
+	
+	.diploma .for_name_cours{padding-left:30px;margin-top: -4px;margin-bottom: 6px;}
+	.diploma .name_cours{display:inline;line-height: 2;text-indent: 20px;}
+	.diploma .prog{display:inline;margin-left: 18px;}
+
+	.diploma .surname_rod{margin-left: 140px; }
+	.diploma .name_rod{margin-left: 50px;display:inline  }
+	.diploma .scope{margin-left: 40px;margin-top:37px}
+	.diploma .s_y {margin-top:222px;margin-left: 70px;}
+		.diploma .sity{display:inline;padding-left:10px}
+		.diploma .year{display:inline;padding-left:95px}
+
+.attachment{background-image:url(background1.jpg); background-size: 100%;width:538.5px;height:700px;padding-top:46px;float:left;}
+	.attachment .number{margin-left:420px}
+	.attachment .surname{margin-left:60px;float:left; margin-top:98px}
+	.attachment .name, .attachment .middlename{ margin-top:98px;float:left;margin-left:6px;}
+	
+	.attachment .educ{margin-top:173px;margin-left:300px;}
+	
+	.attachment .date1{margin-left: 80px; float:left;white-space: pre;margin-top: 40px;}
+	.attachment .date2{float:left;white-space: pre;margin-left: 95px;margin-top: 40px;}
+	
+	.attachment .name_inst{margin-top: 78px;margin-left: 56px;text-indent: 380px;line-height: 2.5;}
+	.attachment .name_cours{margin-top: 8px;margin-left: 56px;text-indent: 90px;line-height: 1.3;}
+	
+	.attachment .atestation{margin-top: 83px;margin-left: 56px;text-indent: 300px;line-height: 1.3;}
+	.attachment .evaluation{display:inline}
+	
+.attachment2{background-image:url(background2.jpg); background-size: 100%;width:538.5px;height:700px;padding-top: 56px;float:left}
+	.attachment2 .for_attachment2{    margin-top: 80px;width: 450px;margin-left: 45px;}
+	.attachment2 .for_attachment2 tr:nth-child(1) {display:none}
+	.attachment2 .for_attachment2 tr td:nth-child(1){width: 20px;vertical-align: top;padding-top: 9px;}
+	.attachment2 .for_attachment2 tr td:nth-child(2){ width:190px;padding: 2px 2px;text-align: left;}
+	.attachment2 .for_attachment2 tr td:nth-child(3){ width:100px;}
+	
+		.attachment2 .for_attachment2 select{border:none; background:none;padding-left: 16px;-webkit-appearance: none;-moz-appearance: none}
+		
+	.attachment2 .hours{margin-top:100px; margin-left:150px}
+@media print {
+	@page {size: landscape; margin:0;padding:0}
+	
+	}
+	

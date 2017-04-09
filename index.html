@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>diploma</title>
+  <!--[if IE]type=text>
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+   
+   <script src="js/jquery-3.2.0.min.js"></script>
+   <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+   <script src="js/script.js"></script>
+ </head>
+ <body>
+	<form class="form">
+	<div class="for">
+		Регистрационный номер <input id="reg_number_form" class="for_diploma"></input>
+	</div >
+	<div class="for_name for">
+		<div class="div_name">
+			Фамилия <input id="surname_form" class="for_attachment"></input>
+			Имя <input id="name_form" class="for_attachment"></input>
+			Отчество <input id="middlename_form" class="for_attachment"></input>
+		</div>
+		<div class="div_name">
+			Фамилия в дательном падеже<input id="surname_dat_form" class="for_diploma"></input>
+			Имя в дательном падеже <input id="name_dat_form" class="for_diploma"></input>
+			Отчество в дательном падеже <input id="middlename_dat_form" class="for_diploma"></input>
+		</div>
+		<div class="div_name">
+			Фамилия в родительном падеже <input id="surname_rod_form" class="for_diploma"></input>
+			Имя в родительном падеже <input id="name_rod_form" class="for_diploma"></input>
+			Отчество в родительном падеже <input id="middlename_rod_form" class="for_diploma"></input>
+		</div>
+	</div>
+	<div class="for">
+		Имеет документ об образовании 
+		<select  id="educ_form" class="for_attachment select">
+					<option selected="selected" value='1'>высшем</option>
+					<option value='2'>среднем</option>
+		</select>
+	</div >
+	<div class="for">
+		Аттестационная работа на тему 
+		<textarea id="atestation_form" class="for_attachment"></textarea>
+		Оценка
+		<select  id="evaluation_form" >
+					<option selected="selected" value='1'>удовл</option>
+					<option value='2'>хорошо</option>
+					<option value='3'>отлично</option>
+		</select>
+	</div >
+	<div class="for_date for">
+		Начало курса <input class="date for_diploma for_attachment" id="date1_form"></input>
+		Конец курса <input class="date for_diploma for_attachment" id="date2_form"></input>
+	</div >
+	<div class="for_cours for">
+		Название курса 
+		<select  id="name_cours_form"  class="for_diploma for_attachment select">
+					<option selected="selected" value='1'>«Комплексное обеспечение информационной безопасности автоматизированных систем. Криптографические средства и методы защиты информации», 560 часов.</option>
+					<option value='2'>2</option>
+		</select>
+		Ведение профессиональной деятельности в сфере <input  id="scope_form"  class="for_diploma" disabled></input>
+		<table id="subjects_form" class="for_attachment2" cellspacing="0" >
+			<tr>
+				<th>№</th>
+				<th>Название дисциплины</th>
+				<th>Количество часов</th>
+				<th>Оценка</th>
+			</tr>
+		</table>
+	</div >
+	<div class="for_date for">
+		Дата решения комиссии 
+		<input class="date for_diploma" id="date3_form"></input>
+	</div >
+	<div class="for">
+		Год выдачи диплома
+		<input  id="year_form" value="2017" class="for_diploma"></input>
+	</div >
+	
+	<div class="for">
+		Номер приложения
+		<input  id="number_form" class="for_attachment" ></input>
+	</div >
+	
+	</form>
+ 
+	
+	<button id="printDiploma" class="button" onclick="$.print('diploma');">Распечатать диплом</button>
+	<button id="printDiploma" class="button" onclick="$.print('attachment');">Распечатать приложение стр.1</button>
+	<button id="printDiploma" class="button" onclick="$.print('attachment2');">Распечатать приложение стр.2</button>
+	<div class= "print">
+		 <div id="diploma">
+			<div class="diploma">
+				<div class="left">
+					<div class="span"><span class="reg_number">ddd</span></div>
+				</div>
+				<div class="right">
+					<span class="surname_dat">Иванову</span>
+					<div class="span">
+						<span class="name_dat">Ивану</span>
+						<span class="middlename_dat">Ивановичу</span>
+					</div>
+
+					<div class="span">
+						<span  class="date1">3 марта</span>
+						<span  class="date2">2 апреля</span>
+					</div>
+						
+					<span class="name_inst"  >Частном учреждении дополнительного профессионального образования «Центр информационных технологий и безопасности информационных систем»</span>
+					
+					<div class="span for_name_cours">
+						<span class="prog">программе </span><span class="name_cours"  >«Комплексное обеспечение информационной безопасности автоматизированных систем. Криптографические средства и методы защиты информации», 560 часов.</span>
+					</DIV>
+						
+					<span class="date3">5 мая</span>
+							
+					<span class="surname_rod">Иванова</span>
+					<div class="span">
+						<span class="name_rod">Ивана</span>
+						<span class="middlename_rod">Ивановича</span>
+					</div>
+					
+					<span class="scope" >информационной безопасности</span>
+					
+					<div class=" s_y">
+						<span class="sity" >Калуга</span>
+						<span class="year" >2017</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="attachment">
+			<div class="attachment">
+				<span  class="number">ddd</span>
+			
+				<span class="surname">Иванов</span>
+				<span class="name">Иван</span>
+				<span class="middlename">Иванович</span>
+				
+				<span class="educ">высшем</span>
+				
+				<div class="span">
+					<span class="date1">3 марта</span>
+					<span class="date2">2 апреля</span>
+				</div>
+				
+				<span class="name_inst"  >Частном учреждении дополнительного профессионального образования «Центр информационных технологий и безопасности информационных систем»</span>
+				<span class="name_cours"  >«Комплексное обеспечение информационной безопасности автоматизированных систем. Криптографические средства и методы защиты информации», 560 часов.</span>
+				
+				<span><span class="atestation"  >«Комплексное обеспечение информационной безопасности автоматизированных систем. Криптографические средства и методы <span class="evaluation">(отлично)</span></span>
+				
+				
+			</div>
+		</div>
+		
+		<div id="attachment2">
+			<div class="attachment2">
+				<span  class="subjects">
+				</span>
+				<span class="hours">560 часов</span>
+			</div>
+		</div>
+	</div>
+ </body>
+</html>
