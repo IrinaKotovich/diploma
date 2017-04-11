@@ -117,23 +117,23 @@ $.print = function(x){
 			+'@page {size: landscape; margin:0;padding:0}}</style>';
 		}
 		else if(x=='attachment'){
-			var printing_css='<style> span, .span{ display:block; margin-bottom:11px;font: 13.3333px Arial;}'
+			var printing_css='<style> span, .span{ display:block; margin-bottom:0.5cm;font: 13.3333px Arial;}'
 			+'span.number span{display:inline; margin-right:5px}'
 			
-			+'.attachment{background-image:url(background1.jpg); background-size: 100%;width:538.5px;height:756px;padding-top: 46px;}'
-			+'.attachment .number{margin-left:420px}'
-			+'.attachment .surname{margin-left:60px;float:left; margin-top:95px}'
-			+'.attachment .name, .attachment .middlename{ margin-top:95px;float:left;margin-left:6px;}'
+			+'.attachment{background-image:url(background1.jpg); background-size: 100%;width:14.25cm;height:20cm;padding-top: 1.3cm;}'
+			+'.attachment .number{margin-left:11cm}'
+			+'.attachment .surname{margin-left:1.5cm;float:left; margin-top:2.2cm}'
+			+'.attachment .name, .attachment .middlename{ margin-top:2.2cm;float:left;margin-left:0.25cm;}'
 			
-			+'.attachment .educ{margin-top:173px;margin-left:300px;}'
+			+'.attachment .educ{margin-top:4.5cm;margin-left:7.5cm;}'
 			
-			+'.attachment .date1{margin-left: 80px; float:left;white-space: pre;margin-top: 45px;}'
-			+'.attachment .date2{float:left;white-space: pre;margin-left: 95px;margin-top: 45px;}'
+			+'.attachment .date1{margin-left: 1.8cm; float:left;white-space: pre;margin-top: 1cm;}'
+			+'.attachment .date2{float:left;white-space: pre;margin-left: 2.8cm;margin-top: 1cm;}'
 			
-			+'.attachment .name_inst{margin-top: 78px;margin-left: 56px;text-indent: 380px;line-height: 2.5;}'
-			+'.attachment .name_cours{margin-top: 8px;margin-left: 56px;text-indent: 90px;line-height: 1.3;}'
+			+'.attachment .name_inst{margin-top:-0.7cm;margin-left: 1.5cm;text-indent: 10cm;line-height: 2.5;}'
+			+'.attachment .name_cours{margin-top: -0.3cm;margin-left: 1.5cm;text-indent: 2.5cm;line-height: 1.3;}'
 			
-			+'.attachment .atestation{margin-top: 83px;margin-left: 56px;text-indent: 300px;line-height: 1.3;}'
+			+'.attachment .atestation{margin-top: 2.5cm;margin-left: 1.5cm;text-indent: 8.5cm;line-height: 1.3;}'
 			+'.attachment .evaluation{display:inline}'
 			
 			+'@media print {'
@@ -141,18 +141,18 @@ $.print = function(x){
 		}
 		else if(x=='attachment2'){
 			var printing_css='<style>select, span, .span{ display:block; margin-bottom:11px}'
-			+'table{font: 13.3333px Arial;}'
+			+'table{font: 13.3333px Arial;color:green}'
 			
-			+'.attachment2{background-image:url(background2.jpg); background-size: 100%;width:538.5px;height:700px;padding-top: 56px;float:left;}'
-			+'.attachment2 .for_attachment2{    margin-top: 80px;width: 450px;margin-left: 45px;}'
+			+'.attachment2{background-image:url(background2.jpg); background-size: 100%;width:14.25cm;height:20cm;padding-top: 2.5cm;float:left;}'
+			+'.attachment2 .for_attachment2{    margin-top: 1cm;width: 12cm;margin-left: 1cm;}'
 			+'.attachment2 .for_attachment2 tr:nth-child(1) {display:none}'
-			+'.attachment2 .for_attachment2 tr td:nth-child(1){width: 20px;vertical-align: top;padding-top: 9px;}'
-			+'.attachment2 .for_attachment2 tr td:nth-child(2){ width:190px;padding: 2px 2px;text-align: left;}'
-			+'.attachment2 .for_attachment2 tr td:nth-child(3){ width:130px;text-align: center;}'
+			+'.attachment2 .for_attachment2 tr td:nth-child(1){width: 0.9cm;vertical-align: top;padding-top: 9px;text-align: center;}'
+			+'.attachment2 .for_attachment2 tr td:nth-child(2){ width:5cm;padding: 2px 2px;text-align: left;}'
+			+'.attachment2 .for_attachment2 tr td:nth-child(3){ width:3.5cm;text-align: center;}'
 			+'.attachment2 .for_attachment2 tr td:nth-child(4){text-align: center;}'
 	
-			+'.attachment2 .for_attachment2 select{border:none; background:none;padding-left: 28px;-webkit-appearance: none;-moz-appearance: none}'
-			+'.attachment2 .hours{margin-top:100px; margin-left:150px}'
+			+'.attachment2 .for_attachment2 select{border:none; background:none;padding-left: 0.8cm;-webkit-appearance: none;-moz-appearance: none}'
+			+'.attachment2 .hours{margin-top:2.8cm; margin-left:4cm;color:green}'
 			+'@media print {'
 			+'@page { margin:0;padding:0}'
 	
