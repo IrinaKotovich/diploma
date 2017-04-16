@@ -19,7 +19,7 @@ input, textarea{background:none; border:none; display:block; margin-bottom:8px;o
 		.form table th{border-bottom: 3px solid #AEFF7B}
 		.form table th,td{padding: 10px 5px; text-align: center}
 		
-.print {//display:none}
+.print {display:none}
 .print span, .span{ display:block; margin-bottom:0.3cm;font: 13.3333px Arial;}
 .print span.number span{display:inline; margin-right:5px}
 .diploma{background-image:url(background.png); background-size: 100%;width:28.5cm;height:20cm;//padding-top:70px;//margin-left:5px}

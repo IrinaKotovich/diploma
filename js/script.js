@@ -83,12 +83,11 @@ $.print = function(x){
 		if ($('#middlename_rod_form').val().substr(0,3)!=middlename) {error=2; $('#middlename_rod_form').addClass('error')}
 	}
 	if(error==2)  alert('Проверьте правильность написание полей с именем');
-	error=0;
 	// если все поля заполнены и имена совпадают
 	if(!error){
 		if(x=='diploma'){
 			var printing_css='<style>\ span, .span{ display:block; margin-bottom:0.3cm;font: 13.3333px Arial;}'
-			+'.diploma{background-image:url(./background.png); background-size: 100%;width:28.5cm;height:18.2cm;//padding-top:70px;margin-left:5px;}'
+			+'.diploma{background-image:url(./background.png); background-size: 100%;width:28.5cm;height:18.2cm;padding-top:1cm;margin-left:1cm}'
 			+'.diploma .left, .diploma .right{width:45%; height:100%; float:left;margin-top:1.8cm;//height:653px;}'
 			+'.diploma .right{padding-left: 2cm;}'
 
